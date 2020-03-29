@@ -27,8 +27,8 @@ namespace employeeservice.Common
         /// <summary>
         /// Name of the table/doc to store loginusers data
         /// </summary>
-        [Description("W3loginusers")]
-        W3loginusers,
+        [Description("w3loginusers")]
+        wloginusers,
         /// <summary>
         /// Name of the table/doc to store loginusers data
         /// </summary>

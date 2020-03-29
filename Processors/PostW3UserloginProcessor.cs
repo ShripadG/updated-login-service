@@ -21,7 +21,7 @@ namespace loginservice.Processors
 
             if (cloudantService != null)
             {
-                var response = await cloudantService.CreateAsync(loginuserAddRequest, DBNames.W3loginusers.ToString());
+                var response = await cloudantService.CreateAsync(loginuserAddRequest, DBNames.wloginusers.ToString());
                // var audit = await cloudantService.CreateAsync(auditData, DBNames.auditdata.ToString());
                 return JsonConvert.DeserializeObject<UpdateLoginUsersResponse>(response);
             }

@@ -49,7 +49,7 @@ namespace loginservice.Controllers
             }
             else
             {
-                return await _cloudantService.GetAllAsync(DBNames.W3loginusers.ToString());
+                return await _cloudantService.GetAllAsync(DBNames.wloginusers.ToString());
             }
         }       
 
@@ -102,7 +102,7 @@ namespace loginservice.Controllers
         {
             if (_cloudantService != null)
             {
-                return await _cloudantService.DeleteAsync(id, rev, DBNames.W3loginusers.ToString());
+                return await _cloudantService.DeleteAsync(id, rev, DBNames.wloginusers.ToString());
                 
             }
             else
@@ -118,7 +118,7 @@ namespace loginservice.Controllers
         [HttpPost("W3login")]
         public async Task<UpdateLoginUsersvalidateResponse> PostLogin([FromBody]ValidateLoginUsersAddRequest validateloginuser)
         {
-            var response = await _cloudantService.GetAllAsync(DBNames.W3loginusers.ToString());
+            var response = await _cloudantService.GetAllAsync(DBNames.wloginusers.ToString());
             BulkData loginusers = JsonConvert.DeserializeObject<BulkData>(response);
 
             //if (validateloginuser.Username != null)
